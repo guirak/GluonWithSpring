@@ -1,0 +1,13 @@
+org.slf4j.LoggerFactory
+ch.qos.logback.classic.Logger
+org.slf4j.simple.SimpleLogger
+org.slf4j.impl.StaticLoggerBinder
+ch.qos.logback.core.spi.AppenderAttachableImpl
+ch.qos.logback.core.status.StatusBase
+ch.qos.logback.classic.Level
+ch.qos.logback.core.status.InfoStatus
+ch.qos.logback.classic.PatternLayout
+ch.qos.logback.core.CoreConstants
+org.slf4j.MDC
+ch.qos.logback.core.util.StatusPrinter
+ch.qos.logback.core.util.Loader

@@ -33,8 +33,7 @@ tasks.withType(JavaCompile) {
 
 mainClassName = 'com.example.gluonwithspring.HelloApplication'
 application {
-//    mainModule = 'com.example.gluonwithspring'
-    mainClass = 'com.example.gluonwithspring.HelloApplication'
+    mainClass.set('com.example.gluonwithspring.HelloApplication')
 }
 
 javafx {
@@ -76,32 +75,10 @@ gluonfx {
         version = "4.0.16"
         services 'display', 'lifecycle', 'statusbar', 'storage'
     }
-//
-//    linkerArgs = ["-L/usr/lib/x86_64-linux-gnu/"]
-//
-////        // Initialiser la classe Logger au moment de l'exécution
-////    runtimeArgs = ["--initialize-at-build-time=ch.qos.logback.classic.Logger"]
-//////        // Ajouter l'option --trace-object-instantiation pour aider à déboguer les problèmes d'instanciation
-//    compilerArgs = ["--trace-object-instantiation=ch.qos.logback.classic.Logger",
-//                    "--allow-incomplete-classpath",
-//                    "--initialize-at-run-time=io.netty.util.internal.logging.Log4JLogger"
-////                    "--initialize-at-run-time=io.netty.channel.\\*",
-////                    "--initialize-at-run-time=io.netty.channel.ChannelHandlerMask",
-////                    "--initialize-at-run-time=io.netty.channel.nio.AbstractNioChannel",
-////                    "--initialize-at-run-time=io.netty.channel.pool.SimpleChannelPool",
-////                    "--initialize-at-run-time=io.netty.channel.socket.nio.\\*",
-////                    "--initialize-at-run-time=io.netty.channel.socket.nio.SelectorProviderUtil",
-////                    "--initialize-at-run-time=io.netty.\\*",
-////                    "--initialize-at-run-time=io.netty.util.\\*",
-////                    "--initialize-at-run-time=io.netty.util.AttributeKey",
-////                    "--initialize-at-run-time=io.netty.util.NetUtil",
-////                    "--initialize-at-run-time=io.netty.util.NetUtilInitializations",
-////                    "--initialize-at-run-time=io.netty.handler.codec.http.HttpScheme",
-////                    "--initialize-at-run-time=io.netty.handler.codec.http.websocketx.WebSocketClientHandshaker",
-////                    "--initialize-at-run-time=io.netty.util.internal.PlatformDependent",
-////                    "--initialize-at-run-time=io.netty.util.AsciiString",
-////                    "--initialize-at-run-time=io.netty.\\*",
-////                    "--initialize-at-run-time=io.netty.util.internal.SystemPropertyUtil"
-//
-//    ]
+
+    linkerArgs = ["-L/usr/lib/x86_64-linux-gnu/"]
+
+    compilerArgs = ["--trace-object-instantiation=ch.qos.logback.classic.Logger",
+                    "--initialize-at-run-time=io.netty.util.internal.logging.Log4JLogger"
+    ]
 }
